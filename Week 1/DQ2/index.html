@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Input Validation Website</title>
+</head>
+<body>
+<h1>Create an account</h1>
+<form action = "Servlet1">
+<table>
+	<tr>
+		<td><label>Create your username: </label></td>
+		<td><input type="text" name="username" title="Usernames must be at least 8 characters long." placeholder="Username"></td>
+	</tr>
+	<tr>
+		<td><label>Create your password: </label></td>
+		<td><input type="password" name="password" title="Your password goes here." placeholder="Password"></td>
+	</tr>
+	<tr>
+		<td><label>Verify your password: </label></td>
+		<td><input type="password" name="password2" title="Must match provided password." placeholder="Password"></td>
+	</tr>
+	<tr>
+		<td><label>Enter your e-mail: </label></td>
+		<td><input type="text" name="email" title="Your e-mail goes here." placeholder="E-mail"></td>
+	</tr>
+	<tr> 
+		<td>&nbsp;</td>
+	</tr>
+	<tr>
+		<td ><input type="submit" value ="Submit" style="float:right;"></td>
+	</tr>
+</table>
+</form>
+</body>
+</html>
