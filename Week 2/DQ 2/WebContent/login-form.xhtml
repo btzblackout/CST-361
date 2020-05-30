@@ -1,0 +1,45 @@
+<!--
+AUTHOR: Raymond Lawson
+CST-361
+Developed for Week 2 DQ 2
+-->
+<!--This is a simple login page that implements the layout I developed. It overrides the content.-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	  xmlns:h="http://xmlns.jcp.org/jsf/html"
+	  xmlns:f="http://xmlns.jcp.org/jsf/core">
+ 
+	<h:head>
+	
+		<title><ui:insert>Login Page</ui:insert></title>
+		
+	</h:head>
+	
+	<body>
+		
+		<!-- This calls the layout template I made so the page will use the default components.-->
+		<ui:composition template ="/layouts/defaultLayout.xhtml">
+			
+			<!-- This overrides the content component -->
+			<ui:define name="content">
+		
+				<h:form>
+			
+					Username: <h:inputText value="#{user.username}" required = "true" requiredMessage = "Username is required."/>
+				
+					Password: <h:inputText value="#{user.password}" required = "true" requiredMessage = "Password is required."/>
+				
+					<h:commandButton action="#{controller.onClick()}" value="Submit" />
+				
+				</h:form>
+			
+			</ui:define>
+		
+		</ui:composition>
+	
+	</body>
+	
+</html>
