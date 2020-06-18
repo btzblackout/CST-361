@@ -1,0 +1,19 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core">
+	<head>
+		<title>Response</title>		
+	</head>	
+	<body>
+		<ui:composition template = "/layouts/defaultLayout.xhtml">		
+			<!-- This overrides the content component.-->
+			<ui:define name = "content">	
+			<!-- This calls the getUsername method in the CDI backing bean class annotated with @Named("userBean") -->		
+				<p>Welcome #{userBean.username}. You are successfully logged in.</p>				
+			</ui:define>			
+		</ui:composition>		
+	</body>	
+</html>
